@@ -2,6 +2,7 @@
   "name": "otsimo-form-example",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cancit.github.io/otsimo-form-demo/build",
   "dependencies": {
     "otsimo-form": "^0.1.0",
     "react": "^16.7.0",
