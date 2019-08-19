@@ -1,0 +1,32 @@
+{
+   "definitions": {
+      "Vector": {
+         "type": "object",
+         "properties": {
+            "x": {
+               "type": "number",
+               "default": 0.5,
+               "minimum": 0,
+               "maximum": 1
+            },
+            "y": {
+               "type": "number",
+               "default": 0.5,
+               "minimum": 0,
+               "maximum": 1
+            }
+         }
+      }
+   },
+   "type": "object",
+   "properties": {
+      "min": {
+         "$ref": "#/definitions/Vector",
+         "title": "Anchor Mimumum Position"
+      },
+      "max": {
+         "$ref": "#/definitions/Vector",
+         "title": "Anchor Maximum Position"
+      }
+   }
+}

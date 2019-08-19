@@ -1,0 +1,197 @@
+[
+   {
+      "key": "id",
+      "title": "Id",
+      "type": "string",
+      "readonly": true,
+      "description": "Identifier of the exercise"
+   },
+   {
+      "key": "title",
+      "title": "Title",
+      "type": "string",
+      "description": "Title of the exercise"
+   },
+   {
+      "key": "description",
+      "title": "Description",
+      "type": "string",
+      "description": "Description of the exercise"
+   },
+   {
+      "key": "thumbnail",
+      "title": "Thumbnail",
+      "type": "parent",
+      "isArray": false,
+      "children": [
+         {
+            "key": "url",
+            "title": "Url",
+            "type": "string",
+            "validator": {
+               "regex": "^(?:http(s)?:\\/\\/)?[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$",
+               "minLength": 4
+            }
+         },
+         {
+            "key": "width",
+            "title": "Width",
+            "type": "number"
+         },
+         {
+            "key": "height",
+            "title": "Height",
+            "type": "number"
+         },
+         {
+            "key": "durationMs",
+            "title": "Duration Ms",
+            "type": "number"
+         },
+         {
+            "key": "size",
+            "title": "Size",
+            "type": "number"
+         },
+         {
+            "key": "variations",
+            "title": "Variations",
+            "type": "parent",
+            "isArray": true,
+            "children": [
+               {
+                  "key": "url",
+                  "title": "Url",
+                  "type": "string",
+                  "validator": {
+                     "regex": "^(?:http(s)?:\\/\\/)?[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$",
+                     "minLength": 4
+                  }
+               },
+               {
+                  "key": "width",
+                  "title": "Width",
+                  "type": "number"
+               },
+               {
+                  "key": "height",
+                  "title": "Height",
+                  "type": "number"
+               },
+               {
+                  "key": "mime",
+                  "title": "Mime",
+                  "type": "string"
+               },
+               {
+                  "key": "size",
+                  "title": "Size",
+                  "type": "number"
+               }
+            ]
+         }
+      ],
+      "description": "Thumbnail of the exercise. It is a media object which means it includes\nmore than one image"
+   },
+   {
+      "key": "categoryId",
+      "title": "Category Id",
+      "type": "string",
+      "readonly": true,
+      "hasDynamicSource": true,
+      "description": "CategoryID of the exercise"
+   },
+   {
+      "key": "video",
+      "title": "Video",
+      "type": "parent",
+      "isArray": false,
+      "children": [
+         {
+            "key": "url",
+            "title": "Url",
+            "type": "string",
+            "validator": {
+               "regex": "^(?:http(s)?:\\/\\/)?[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$",
+               "minLength": 4
+            }
+         },
+         {
+            "key": "width",
+            "title": "Width",
+            "type": "number"
+         },
+         {
+            "key": "height",
+            "title": "Height",
+            "type": "number"
+         },
+         {
+            "key": "durationMs",
+            "title": "Duration Ms",
+            "type": "number"
+         },
+         {
+            "key": "size",
+            "title": "Size",
+            "type": "number"
+         },
+         {
+            "key": "variations",
+            "title": "Variations",
+            "type": "parent",
+            "isArray": true,
+            "children": [
+               {
+                  "key": "url",
+                  "title": "Url",
+                  "type": "string",
+                  "validator": {
+                     "regex": "^(?:http(s)?:\\/\\/)?[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$",
+                     "minLength": 4
+                  }
+               },
+               {
+                  "key": "width",
+                  "title": "Width",
+                  "type": "number"
+               },
+               {
+                  "key": "height",
+                  "title": "Height",
+                  "type": "number"
+               },
+               {
+                  "key": "mime",
+                  "title": "Mime",
+                  "type": "string"
+               },
+               {
+                  "key": "size",
+                  "title": "Size",
+                  "type": "number"
+               }
+            ]
+         }
+      ],
+      "description": "Video url of the exercise. It is a media object which means it has several\nurl to use in different screen resolutions"
+   },
+   {
+      "key": "index",
+      "title": "Index",
+      "type": "number"
+   },
+   {
+      "key": "stickerIds",
+      "title": "Sticker Ids",
+      "type": "select",
+      "hasDynamicSource": true,
+      "multiple": true,
+      "description": "Stickers to use at this exercise"
+   },
+   {
+      "key": "annotations",
+      "title": "Annotations",
+      "type": "stringMap"
+   }
+]
